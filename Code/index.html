@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zingende Schelp</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<body>
+
+    <a-scene shadow="type: pcfsoft">
+
+        <a-sky src="images/Clouds.avif" rotation="0 -130 0"></a-sky>
+        
+        <a-sphere position="0 5 -10" radius="1.5" color="#FFD700" material="emissive: #FFA500; emissiveIntensity: 1">
+        </a-sphere>        
+        
+        <a-plane rotation="-90 0 0" width="200" height="30" color="#F1DE8A" shadow="receive: true"></a-plane> 
+   
+        <a-cone 
+            id="shell"  
+            position="-0.8 0.4 -3" 
+            rotation="45 30 0" 
+            radius-bottom="0.2" 
+            radius-top="0" 
+            height="0.8" 
+            color="#ffccd5" 
+            roughness="0.5"
+            shadow="cast: true">
+        </a-cone>
+
+        <a-camera>
+            <a-cursor color="black"></a-cursor>
+        </a-camera>
+
+    </a-scene>
+</body>
+<script src="./script.js"></script>
+</html>
+
+
